@@ -1,0 +1,68 @@
+site_name: CISSP 学习笔记
+site_description: CISSP 学习笔记
+site_author: Josh
+site_url: https://Superior-Josh.github.io/CISSP
+
+# 主题配置
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - toc.integrate
+    - navigation.top
+    - search.suggest
+    - search.highlight
+  palette:
+    # 浅色模式配置（默认）
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: teal
+      toggle:
+        icon: material/weather-night  # 切换到深色模式的图标
+        name: 切换到深色模式
+    # 深色模式配置
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: blue
+      accent: light blue
+      toggle:
+        icon: material/weather-sunny  # 切换到浅色模式的图标
+        name: 切换到浅色模式
+
+# 插件配置
+plugins:
+  - search
+  - section-index
+  - mkdocs-simple-hooks:
+      hooks:
+        on_pre_build: "hooks:generate_nav"
+        on_page_markdown: "hooks:fix_image_paths"
+
+nav: []
+
+# Markdown扩展
+markdown_extensions:
+  - toc:
+      permalink: true
+  - codehilite:
+      guess_lang: false
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - tables
+  - pymdownx.arithmatex:
+      generic: true
+      block_syntax: "dollar"
+
+extra_javascript:
+  #- javascripts/mathjax.js  # 自定义配置脚本
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js  # MathJax 核心库
+
+# 部署配置
+deploy:
+  repo: https://github.com/Superior-Josh/CISSP.git
+  branch: gh-pages
+  name: Superior-Josh
+  email: 916981349@qq.com
