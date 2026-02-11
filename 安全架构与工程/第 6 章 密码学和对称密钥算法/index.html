@@ -1753,53 +1753,53 @@
 </li>
 <li>
 <p>加密
-$
+$$
 C_i = E_k(P_{i} \oplus C_{i-1}) \
 C_0 = IV
-$</p>
+$$</p>
 </li>
 <li>
 <p>解密
-$
+$$
 P_i = D_k(C_{i}) \oplus C_{i-1} \
 C_0 = IV
-$</p>
+$$</p>
 </li>
 <li>
 <p><strong>密码反馈模式</strong></p>
 </li>
 <li>
 <p>加密
-$
+$$
 C_i = P_{i} \oplus E_k(C_{i-1}) \
 C_0 = IV
-$</p>
+$$</p>
 </li>
 <li>
 <p>解密      <br />
-$
+$$
 P_i = C_{i} \oplus E_k(C_{i-1}) \
 C_0 = IV
-$</p>
+$$</p>
 </li>
 <li>
 <p><strong>输出反馈模式</strong></p>
 </li>
 <li>
 <p>加密
-$
+$$
 C_i = P_{i} \oplus O_{i} \
 O_i = E_k(O_{i-1}) \
 O_0 = IV
-$</p>
+$$</p>
 </li>
 <li>
 <p>解密      <br />
-$
+$$
 P_i = C_{i} \oplus O_{i} \
 O_i = E_k(O_{i-1}) \
 O_0 = IV
-$</p>
+$$</p>
 </li>
 <li>
 <p><strong>计数器模式</strong></p>
@@ -1978,8 +1978,6 @@ CTR + CBC-MAC</p>
     
     
       <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
-      
-        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
