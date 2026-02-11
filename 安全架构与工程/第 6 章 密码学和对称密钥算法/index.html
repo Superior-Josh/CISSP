@@ -1753,67 +1753,67 @@
 </li>
 <li>
 <p>加密
-$$
-C_i = E_k(P_{i} \oplus C_{i-1}) \
-C_0 = IV
-$$</p>
+    $$
+    C_i = E_k(P_{i} \oplus C_{i-1}) \
+    C_0 = IV
+    $$</p>
 </li>
 <li>
 <p>解密
-$$
-P_i = D_k(C_{i}) \oplus C_{i-1} \
-C_0 = IV
-$$</p>
+    $$
+    P_i = D_k(C_{i}) \oplus C_{i-1} \
+    C_0 = IV
+    $$</p>
 </li>
 <li>
 <p><strong>密码反馈模式</strong></p>
 </li>
 <li>
 <p>加密
-$$
-C_i = P_{i} \oplus E_k(C_{i-1}) \
-C_0 = IV
-$$</p>
+    $$
+    C_i = P_{i} \oplus E_k(C_{i-1}) \
+    C_0 = IV
+    $$</p>
 </li>
 <li>
 <p>解密      <br />
-$$
-P_i = C_{i} \oplus E_k(C_{i-1}) \
-C_0 = IV
-$$</p>
+    $$
+    P_i = C_{i} \oplus E_k(C_{i-1}) \
+    C_0 = IV
+    $$</p>
 </li>
 <li>
 <p><strong>输出反馈模式</strong></p>
 </li>
 <li>
 <p>加密
-$$
-C_i = P_{i} \oplus O_{i} \
-O_i = E_k(O_{i-1}) \
-O_0 = IV
-$$</p>
+    $$
+    C_i = P_{i} \oplus O_{i} \
+    O_i = E_k(O_{i-1}) \
+    O_0 = IV
+    $$</p>
 </li>
 <li>
 <p>解密      <br />
-$$
-P_i = C_{i} \oplus O_{i} \
-O_i = E_k(O_{i-1}) \
-O_0 = IV
-$$</p>
+    $$
+    P_i = C_{i} \oplus O_{i} \
+    O_i = E_k(O_{i-1}) \
+    O_0 = IV
+    $$</p>
 </li>
 <li>
 <p><strong>计数器模式</strong></p>
 </li>
 <li>
 <p><strong>Galois/计数器模式(GCM)</strong>
-CTR + 身份验证标记</p>
+    CTR + 身份验证标记</p>
 </li>
 <li>
 <p>还提供真实性。</p>
 </li>
 <li>
 <p><strong>带密码块链接消息验证码的计数器模式(CCM)</strong>
-CTR + CBC-MAC</p>
+    CTR + CBC-MAC</p>
 </li>
 <li>还提供真实性。</li>
 <li>只用于128位块长度并要求每次传输必须使用不同nonce的块密码。</li>
@@ -1910,14 +1910,15 @@ CTR + CBC-MAC</p>
 <h3 id="6311">6.3.11 对称密钥管理<a class="headerlink" href="#6311" title="Permanent link">&para;</a></h3>
 <ol>
 <li>密钥托管和恢复</li>
-<li>密钥托管</li>
 <li><strong>公平密码系统</strong></li>
 <li><strong>托管加密标准</strong><ul>
 <li>针对于 Clipper 芯片</li>
 </ul>
 </li>
-<li>密钥恢复</li>
+<li>密钥恢复<ul>
 <li>密钥恢复代理：N 之取 M 控制</li>
+</ul>
+</li>
 </ol>
 
 

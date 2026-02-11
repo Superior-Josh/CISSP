@@ -1935,27 +1935,23 @@
 <ol>
 <li><strong>注册</strong></li>
 <li><strong>验证</strong></li>
-<li><strong>注销(revoke)</strong><ul>
-<li>原因：</li>
+<li><strong>注销(revoke)</strong></li>
+<li>原因：<ul>
 <li>证书失信</li>
 <li>证书误发</li>
 <li>证书细节更改</li>
 <li>安全关联变更(例如，主体不再被申请证书的机构雇佣)</li>
-<li>验证证书的真实性并识别被注销的证书</li>
-<li><strong>证书注销列表(CRL)</strong><ul>
+</ul>
+</li>
+<li>验证证书的真实性并识别被注销的证书<ul>
+<li><strong>证书注销列表(CRL)</strong></li>
 <li>内含 CA 签发和注销的证书序号，以及注销的生效日期和时间</li>
 <li>缺点：用户必须定期下载 CRL 并交叉查对，这在证书注销的时间与最终用户得知注销的时间之间产生了一个滞后期</li>
-</ul>
-</li>
-<li><strong>在线证书状态协议(OCSP)</strong><ul>
+<li><strong>在线证书状态协议(OCSP)</strong></li>
 <li>客户端收到一份证书后可向 CA 的 OCSP 发送一个请求，服务器随后把该证书的有效、无效或未知状态回复给客户端</li>
 <li>缺点：给由 CA 运行的 OCSP 服务器带来极大的负担 </li>
-</ul>
-</li>
-<li><strong>证书装订</strong><ul>
+<li><strong>证书装订</strong></li>
 <li>OCSP 的扩展：由服务器代替客户端去查询 OCSP 响应，并将该响应“装订”在 TLS 握手过程中一并发送给客户端。</li>
-</ul>
-</li>
 </ul>
 </li>
 </ol>
