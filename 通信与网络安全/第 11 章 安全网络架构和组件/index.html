@@ -1005,8 +1005,190 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#1114-osi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.1.4 OSI 模型层次
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#114" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.4 通用应用层协议
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#115" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.5 传输层协议
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#116" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.6 域名系统
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11.6 域名系统">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1161-dns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.6.1 DNS 中毒
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1162" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.6.2 域名劫持
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#117" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.7 互联网协议网络
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#118-arp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.8 ARP 关注点
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#119" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.9 安全通信协议
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1110" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.10 多层协议的含义
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1111" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.11 微分网段
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1112" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.12 无线网络
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1113_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.13 其他通信协议
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1114" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.14 蜂窝网络
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1115" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.15 内容分发网络
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1116" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.16 安全网络组件
+      
+    </span>
+  </a>
   
 </li>
       
@@ -1567,40 +1749,112 @@
 <thead>
 <tr>
 <th>OSI</th>
+<th>TCP/IP</th>
 <th>PDU(协议数据单元)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>应用层</td>
+<td><strong>应用层</strong></td>
 <td>数据</td>
 </tr>
 <tr>
 <td>表示层</td>
+<td><strong>应用层</strong></td>
 <td>数据</td>
 </tr>
 <tr>
 <td>会话层</td>
+<td><strong>应用层</strong></td>
 <td>数据</td>
 </tr>
 <tr>
+<td>传输层</td>
 <td>传输层</td>
 <td>段(TCP)/数据包(UDP)</td>
 </tr>
 <tr>
 <td>网络层</td>
+<td>互联网层</td>
 <td>数据包</td>
 </tr>
 <tr>
 <td>数据链路层</td>
+<td><strong>链路层</strong></td>
 <td>帧</td>
 </tr>
 <tr>
 <td>物理层</td>
+<td><strong>链路层</strong></td>
 <td>比特</td>
 </tr>
 </tbody>
 </table>
+<h3 id="1114-osi">11.1.4 OSI 模型层次<a class="headerlink" href="#1114-osi" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>应用层</strong>：将用户应用程序、网络服务或操作系统与协议栈相连接</li>
+<li><strong>表示层</strong>：<ul>
+<li>将数据转换为遵循 OSI 模型的任何系统都能理解的格式。将通用或标准化的格式规则强加在数据之上</li>
+<li>还负责加密和压缩</li>
+</ul>
+</li>
+<li><strong>会话层</strong>：建立、维护和终止两台计算机之间的通信会话<ul>
+<li>管理对话规则或对话控制(单工、半双工、全双工)</li>
+<li>建立分组和恢复的检查点，并重传自上次验证检查点以来失败或丢失的 PDU</li>
+</ul>
+</li>
+<li><strong>传输层</strong>：管理连接的完整性并控制会话<ul>
+<li>在节点之间建立通信连接并定义会话规则。<ul>
+<li>会话规则指定每个段可包含多少数据，如何验证消息的完整性，以及如何确定数据是否丢失</li>
+<li>会话规则是通过握手过程建立的</li>
+</ul>
+</li>
+<li>传输层在两个设备之间建立逻辑连接，并提供端到端传输服务以确保数据传输<ul>
+<li>包括用于分段、排序、错误检查、控制数据流、纠错、多路复用和网络服务优化的机制</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>网络层</strong>：逻辑寻址和执行路由</li>
+<li><strong>数据链路层</strong>：将数据包格式化为传输格式</li>
+<li><strong>物理层</strong>：将帧转化为比特 </li>
+</ol>
+<h2 id="114">11.4 通用应用层协议<a class="headerlink" href="#114" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Telnet</strong>：TCP 23 端口。不应使用，应该用 SSH 替代</li>
+<li><strong>FTP</strong>：TCP 20 端口(活动数据连接)/短暂(被动数据连接)和 21 (控制连接)端口。不应使用，应该用 SFTP 或 FTPS 替代</li>
+<li><strong>TFTP</strong>: UDP 69 端口，支持不需要身份认证的文件传输的网络应用程序。用于承载网络设备配置文件，并可支持多播。不应使用</li>
+<li><strong>SMTP</strong>：TCP 25 端口，将电子邮件从客户端传输到电子邮件服务器以及从一个电子邮件服务器传输到另一个电子邮件服务器。仅在使用 TLS 加密创建 SMTPS 时使用</li>
+<li><strong>POP3</strong>：TCP 110 端口。将电子邮件从电子邮件服务器上的收件箱中拉到电子邮件客户端的协议(即客户端存档)。仅在使用 TLS 加密创建 POPS 时使用</li>
+<li><strong>IMAP(IMAP4)</strong>：TCP 143 端口。将电子邮件从电子邮件服务器上的收件箱中拉到电子邮件客户端的协议(即客户端存档)。能仅从电子邮件服务器中检索标头并直接从电子邮件服务器删除邮件(即服务器存档)。仅在使用 TLS 加密创建 IMAPS 时使用</li>
+<li><strong>DHCP</strong>：UDP 67(服务器)端口和 68(客户端)端口。集中控制启动时为系统分配的 TCP/IP 配置设置</li>
+<li><strong>HTTP</strong>：TCP 80 端口。用明文将 Web 页面元素从 Web 服务器传输到 Web 浏览器</li>
+<li><strong>HTTPS</strong>：TCP 443 端口。</li>
+<li><strong>LPD</strong>：TCP 515 端口。网络服务，用于家脱机打印作业以及将打印作业发送到打印机。应封闭在 VPN 中使用</li>
+<li><strong>X Window</strong>：TCP 6000~6003 端口。用于命令行的 GUI API。应封闭在 VPN 中使用</li>
+<li><strong>NFS</strong>：TCP 2049 端口。网络服务，用于支持不同系统之间的文件共享。应封闭在 VPN 中使用</li>
+<li><strong>SNMP</strong>：UDP 161 端口(用于陷阱消息的是 UDP 162 端口)。网络服务，用于从中央监控服务器手机网络运行状况和状态信息。仅 SNMPv3 是安全的</li>
+</ul>
+<h2 id="115">11.5 传输层协议<a class="headerlink" href="#115" title="Permanent link">&para;</a></h2>
+<ul>
+<li>端口 0~1023 被称为服务端口，保留供服务器独占使用</li>
+<li>端口 1024~49151 被称为已注册的软件端口</li>
+<li>端口 49152~65535 被称为随机、动态或临时端口</li>
+</ul>
+<h2 id="116">11.6 域名系统<a class="headerlink" href="#116" title="Permanent link">&para;</a></h2>
+<h3 id="1161-dns">11.6.1 DNS 中毒<a class="headerlink" href="#1161-dns" title="Permanent link">&para;</a></h3>
+<h3 id="1162">11.6.2 域名劫持<a class="headerlink" href="#1162" title="Permanent link">&para;</a></h3>
+<h2 id="117">11.7 互联网协议网络<a class="headerlink" href="#117" title="Permanent link">&para;</a></h2>
+<h2 id="118-arp">11.8 ARP 关注点<a class="headerlink" href="#118-arp" title="Permanent link">&para;</a></h2>
+<h2 id="119">11.9 安全通信协议<a class="headerlink" href="#119" title="Permanent link">&para;</a></h2>
+<h2 id="1110">11.10 多层协议的含义<a class="headerlink" href="#1110" title="Permanent link">&para;</a></h2>
+<h2 id="1111">11.11 微分网段<a class="headerlink" href="#1111" title="Permanent link">&para;</a></h2>
+<h2 id="1112">11.12 无线网络<a class="headerlink" href="#1112" title="Permanent link">&para;</a></h2>
+<h2 id="1113_1">11.13 其他通信协议<a class="headerlink" href="#1113_1" title="Permanent link">&para;</a></h2>
+<h2 id="1114">11.14 蜂窝网络<a class="headerlink" href="#1114" title="Permanent link">&para;</a></h2>
+<h2 id="1115">11.15 内容分发网络<a class="headerlink" href="#1115" title="Permanent link">&para;</a></h2>
+<h2 id="1116">11.16 安全网络组件<a class="headerlink" href="#1116" title="Permanent link">&para;</a></h2>
 
 
 
