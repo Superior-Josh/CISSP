@@ -1757,75 +1757,48 @@
 <ul>
 <li>
 <p>加密</p>
-<p><span class="arithmatex">\(C_i = E_k(P_{i} \oplus C_{i-1}) \\ C_0 = IV\)</span></p>
+<p><span class="arithmatex">\(C_i = E_k(P_{i} \oplus C_{i-1})\)</span>
+<span class="arithmatex">\(C_0 = IV\)</span></p>
 </li>
 <li>
 <p>解密</p>
+<p><span class="arithmatex">\(P_i = D_k(C_{i}) \oplus C_{i-1}\)</span>
+<span class="arithmatex">\(C_0 = IV\)</span></p>
 </li>
 </ul>
 </li>
-</ol>
-<p>$$
-\left{
-\begin{aligned}
-P_i &amp;= D_k(C_{i}) \oplus C_{i-1} \
-C_0 &amp;= IV
-\end{aligned}
-\right.
-$$</p>
-<ol>
-<li><strong>密码反馈模式</strong><ul>
-<li>加密</li>
+<li>
+<p><strong>密码反馈模式</strong></p>
+<ul>
+<li>
+<p>加密</p>
+<p><span class="arithmatex">\(C_i = P_{i} \oplus E_k(C_{i-1})\)</span>
+<span class="arithmatex">\(C_0 = IV\)</span></p>
+</li>
+<li>
+<p>解密</p>
+<p><span class="arithmatex">\(P_i = C_{i} \oplus E_k(C_{i-1})\)</span>
+<span class="arithmatex">\(C_0 = IV\)</span></p>
+</li>
 </ul>
 </li>
-</ol>
-<p>$$
-\left{
-\begin{aligned}
-C_i &amp;= P_{i} \oplus E_k(C_{i-1}) \
-C_0 &amp;= IV
-\end{aligned}
-\right.
-$$</p>
-<div class="codehilite"><pre><span></span><code>- 解密
-</code></pre></div>
-
-<p>$$
-\left{
-\begin{aligned}
-P_i &amp;= C_{i} \oplus E_k(C_{i-1}) \
-C_0 &amp;= IV
-\end{aligned}
-\right.
-$$</p>
-<ol>
-<li><strong>输出反馈模式</strong><ul>
-<li>加密</li>
+<li>
+<p><strong>输出反馈模式</strong></p>
+<ul>
+<li>
+<p>加密</p>
+<p><span class="arithmatex">\(C_i = P_{i} \oplus O_{i}\)</span>
+<span class="arithmatex">\(O_i = E_k(O_{i-1})\)</span>
+<span class="arithmatex">\(O_0 = IV\)</span></p>
+</li>
+<li>
+<p>解密</p>
+<p><span class="arithmatex">\(P_i = C_{i} \oplus O_{i}\)</span>
+<span class="arithmatex">\(O_i = E_k(O_{i-1})\)</span>
+<span class="arithmatex">\(O_0 = IV\)</span></p>
+</li>
 </ul>
 </li>
-</ol>
-<p>$$
-\left{
-\begin{aligned}
-C_i &amp;= P_{i} \oplus O_{i} \
-O_i &amp;= E_k(O_{i-1}) \
-O_0 &amp;= IV
-\end{aligned}
-\right.
-$$</p>
-<div class="codehilite"><pre><span></span><code>- 解密
-</code></pre></div>
-
-<p>$$
-\left{
-\begin{aligned}
-P_i &amp;= C_{i} \oplus O_{i} \
-O_i &amp;= E_k(O_{i-1}) \
-O_0 &amp;= IV
-\end{aligned}
-\right.
-$$</p>
-<ol>
 <li>
 <p><strong>计数器模式</strong></p>
 </li>
