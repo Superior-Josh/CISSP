@@ -1757,13 +1757,13 @@
 <ul>
 <li>
 <p>加密</p>
-<p><span class="arithmatex">\(C_i = E_k(P_{i} \oplus C_{i-1})\)</span>
-<span class="arithmatex">\(C_0 = IV\)</span></p>
+<p><span class="arithmatex">\(C_i = E_k(P_{i} \oplus C_{i-1})\)</span></p>
+<p><span class="arithmatex">\(C_0 = IV\)</span></p>
 </li>
 <li>
 <p>解密</p>
-<p><span class="arithmatex">\(P_i = D_k(C_{i}) \oplus C_{i-1}\)</span>
-<span class="arithmatex">\(C_0 = IV\)</span></p>
+<p><span class="arithmatex">\(P_i = D_k(C_{i}) \oplus C_{i-1}\)</span></p>
+<p><span class="arithmatex">\(C_0 = IV\)</span></p>
 </li>
 </ul>
 </li>
@@ -1772,13 +1772,13 @@
 <ul>
 <li>
 <p>加密</p>
-<p><span class="arithmatex">\(C_i = P_{i} \oplus E_k(C_{i-1})\)</span>
-<span class="arithmatex">\(C_0 = IV\)</span></p>
+<p><span class="arithmatex">\(C_i = P_{i} \oplus E_k(C_{i-1})\)</span></p>
+<p><span class="arithmatex">\(C_0 = IV\)</span></p>
 </li>
 <li>
 <p>解密</p>
-<p><span class="arithmatex">\(P_i = C_{i} \oplus E_k(C_{i-1})\)</span>
-<span class="arithmatex">\(C_0 = IV\)</span></p>
+<p><span class="arithmatex">\(P_i = C_{i} \oplus E_k(C_{i-1})\)</span></p>
+<p><span class="arithmatex">\(C_0 = IV\)</span></p>
 </li>
 </ul>
 </li>
@@ -1787,15 +1787,15 @@
 <ul>
 <li>
 <p>加密</p>
-<p><span class="arithmatex">\(C_i = P_{i} \oplus O_{i}\)</span>
-<span class="arithmatex">\(O_i = E_k(O_{i-1})\)</span>
-<span class="arithmatex">\(O_0 = IV\)</span></p>
+<p><span class="arithmatex">\(C_i = P_{i} \oplus O_{i}\)</span></p>
+<p><span class="arithmatex">\(O_i = E_k(O_{i-1})\)</span></p>
+<p><span class="arithmatex">\(O_0 = IV\)</span></p>
 </li>
 <li>
 <p>解密</p>
-<p><span class="arithmatex">\(P_i = C_{i} \oplus O_{i}\)</span>
-<span class="arithmatex">\(O_i = E_k(O_{i-1})\)</span>
-<span class="arithmatex">\(O_0 = IV\)</span></p>
+<p><span class="arithmatex">\(P_i = C_{i} \oplus O_{i}\)</span></p>
+<p><span class="arithmatex">\(O_i = E_k(O_{i-1})\)</span></p>
+<p><span class="arithmatex">\(O_0 = IV\)</span></p>
 </li>
 </ul>
 </li>
@@ -1804,14 +1804,18 @@
 </li>
 <li>
 <p><strong>Galois/计数器模式(GCM)</strong></p>
-<p>CTR + 身份验证标记
-- 还提供真实性。</p>
+<p>CTR + 身份验证标记</p>
+<ul>
+<li>还提供真实性。</li>
+</ul>
 </li>
 <li>
 <p><strong>带密码块链接消息验证码的计数器模式(CCM)</strong></p>
-<p>CTR + CBC-MAC
-- 还提供真实性。
-- 只用于128位块长度并要求每次传输必须使用不同nonce的块密码。</p>
+<p>CTR + CBC-MAC</p>
+<ul>
+<li>还提供真实性。</li>
+<li>只用于128位块长度并要求每次传输必须使用不同nonce的块密码。</li>
+</ul>
 </li>
 </ol>
 <h3 id="634-idea">6.3.4 国际数据加密算法(IDEA)<a class="headerlink" href="#634-idea" title="Permanent link">&para;</a></h3>
