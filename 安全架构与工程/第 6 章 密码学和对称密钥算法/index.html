@@ -1728,20 +1728,24 @@
 </ul>
 <h2 id="62">6.2 现代密码学<a class="headerlink" href="#62" title="Permanent link">&para;</a></h2>
 <h3 id="622">6.2.2 对称密钥算法<a class="headerlink" href="#622" title="Permanent link">&para;</a></h3>
-<p>弱点：
-- 密钥分发是主要问题
-- 对称密钥加密法不提供不可否认性
-- 算法缺乏可扩展性
-- 密钥必须经常重新生成</p>
+<p>弱点：</p>
+<ul>
+<li>密钥分发是主要问题</li>
+<li>对称密钥加密法不提供不可否认性</li>
+<li>算法缺乏可扩展性</li>
+<li>密钥必须经常重新生成</li>
+</ul>
 <h3 id="623">6.2.3 非对称密钥算法<a class="headerlink" href="#623" title="Permanent link">&para;</a></h3>
 <p>密钥数 = <span class="arithmatex">\(\frac{n(n-1)}{2}\)</span></p>
-<p>主要长处：
-- 添加新用户时只需要生成一个公钥-私钥对
-- 便于从非对称系统移除用户
-- 只需要在用户私钥失信的情况下重新生成密钥
-- 非对称密钥加密可提供完整性、身份认证和不可否认性
-- 密钥分发简便易行
-- 不需要预先建立通信关联</p>
+<p>主要长处：</p>
+<ul>
+<li>添加新用户时只需要生成一个公钥-私钥对</li>
+<li>便于从非对称系统移除用户</li>
+<li>只需要在用户私钥失信的情况下重新生成密钥</li>
+<li>非对称密钥加密可提供完整性、身份认证和不可否认性</li>
+<li>密钥分发简便易行</li>
+<li>不需要预先建立通信关联</li>
+</ul>
 <h2 id="63">6.3 对称密码<a class="headerlink" href="#63" title="Permanent link">&para;</a></h2>
 <h3 id="631">6.3.1 密码运行模式<a class="headerlink" href="#631" title="Permanent link">&para;</a></h3>
 <ol>
@@ -1751,54 +1755,61 @@
 <li>
 <p><strong>密码块链接模式</strong></p>
 <ul>
-<li>加密
-$$
+<li>加密</li>
+</ul>
+</li>
+</ol>
+<p>$$
 \left{
 \begin{aligned}
 C_i &amp;= E_k(P_{i} \oplus C_{i-1}) \
 C_0 &amp;= IV
 \end{aligned}
 \right.
-$$</li>
-<li>解密
-$$
+$$</p>
+<div class="codehilite"><pre><span></span><code>- 解密
+</code></pre></div>
+
+<p>$$
 \left{
 \begin{aligned}
 P_i &amp;= D_k(C_{i}) \oplus C_{i-1} \
 C_0 &amp;= IV
 \end{aligned}
 \right.
-$$</li>
+$$</p>
+<ol>
+<li><strong>密码反馈模式</strong><ul>
+<li>加密</li>
 </ul>
 </li>
-<li>
-<p><strong>密码反馈模式</strong></p>
-<ul>
-<li>加密
-$$
+</ol>
+<p>$$
 \left{
 \begin{aligned}
 C_i &amp;= P_{i} \oplus E_k(C_{i-1}) \
 C_0 &amp;= IV
 \end{aligned}
 \right.
-$$</li>
-<li>解密
-$$
+$$</p>
+<div class="codehilite"><pre><span></span><code>- 解密
+</code></pre></div>
+
+<p>$$
 \left{
 \begin{aligned}
 P_i &amp;= C_{i} \oplus E_k(C_{i-1}) \
 C_0 &amp;= IV
 \end{aligned}
 \right.
-$$</li>
+$$</p>
+<ol>
+<li><strong>输出反馈模式</strong><ul>
+<li>加密</li>
 </ul>
 </li>
-<li>
-<p><strong>输出反馈模式</strong></p>
-<ul>
-<li>加密
-$$
+</ol>
+<p>$$
 \left{
 \begin{aligned}
 C_i &amp;= P_{i} \oplus O_{i} \
@@ -1806,9 +1817,11 @@ O_i &amp;= E_k(O_{i-1}) \
 O_0 &amp;= IV
 \end{aligned}
 \right.
-$$</li>
-<li>解密
-$$
+$$</p>
+<div class="codehilite"><pre><span></span><code>- 解密
+</code></pre></div>
+
+<p>$$
 \left{
 \begin{aligned}
 P_i &amp;= C_{i} \oplus O_{i} \
@@ -1816,26 +1829,21 @@ O_i &amp;= E_k(O_{i-1}) \
 O_0 &amp;= IV
 \end{aligned}
 \right.
-$$</li>
-</ul>
-</li>
+$$</p>
+<ol>
 <li>
 <p><strong>计数器模式</strong></p>
 </li>
 <li>
-<p><strong>Galois/计数器模式(GCM)</strong>
-    CTR + 身份验证标记</p>
-<ul>
-<li>还提供真实性。</li>
-</ul>
+<p><strong>Galois/计数器模式(GCM)</strong></p>
+<p>CTR + 身份验证标记
+- 还提供真实性。</p>
 </li>
 <li>
-<p><strong>带密码块链接消息验证码的计数器模式(CCM)</strong>
-    CTR + CBC-MAC</p>
-<ul>
-<li>还提供真实性。</li>
-<li>只用于128位块长度并要求每次传输必须使用不同nonce的块密码。</li>
-</ul>
+<p><strong>带密码块链接消息验证码的计数器模式(CCM)</strong></p>
+<p>CTR + CBC-MAC
+- 还提供真实性。
+- 只用于128位块长度并要求每次传输必须使用不同nonce的块密码。</p>
 </li>
 </ol>
 <h3 id="634-idea">6.3.4 国际数据加密算法(IDEA)<a class="headerlink" href="#634-idea" title="Permanent link">&para;</a></h3>
