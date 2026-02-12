@@ -1755,21 +1755,16 @@
 <li>
 <p><strong>密码块链接模式</strong></p>
 <ul>
-<li>加密</li>
+<li>
+<p>加密</p>
+<p><span class="arithmatex">\(C_i = E_k(P_{i} \oplus C_{i-1}) \\ C_0 = IV\)</span></p>
+</li>
+<li>
+<p>解密</p>
+</li>
 </ul>
 </li>
 </ol>
-<p>$$
-\left{
-\begin{aligned}
-C_i &amp;= E_k(P_{i} \oplus C_{i-1}) \
-C_0 &amp;= IV
-\end{aligned}
-\right.
-$$</p>
-<div class="codehilite"><pre><span></span><code>- 解密
-</code></pre></div>
-
 <p>$$
 \left{
 \begin{aligned}
